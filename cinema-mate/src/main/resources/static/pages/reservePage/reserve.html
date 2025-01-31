@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinema Mate</title>
+    <link rel="stylesheet" href="reserve.css">
+    <link rel="stylesheet" href="../navBar/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<div>
+    <nav class="navbar">
+        <!--    -->
+        <ul class="navbar-menu">
+            <li><a href="../userHomePage/userHome.html" class="nav-link">Home</a></li>
+            <li><a href="../cinemaListPage/cinemaList.html" class="nav-link">Cinema List</a></li>
+            <li><a href="reserve.html" class="nav-link active">Reserved</a></li>
+            <li><a href="../watchListPage/watchList.html" class="nav-link">Watch List</a></li>
+            <li><a href="../userProfilePage/userProfile.html" class="nav-link"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+        <!--    </div>-->
+    </nav>
+</div>
+
+<div class="booked-list" id="booked-list">
+
+</div>
+
+<!-- Update Modal -->
+<div class="modal" id="reservationModal">
+    <div class="modal-content">
+        <h2>Update Reserved Seats</h2>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="seats">Number of Seats</label>
+                <input type="number" id="seats" min="0" value="0" required>
+                <span id="error">Number exceeds available seats!</span>
+                <p class="seats-info" id="seats-info"></p>
+            </div>
+            <div class="modal-buttons">
+                <button type="button" class="btn-for-reserve cancel-btn">Cancel</button>
+                <button type="submit" class="btn-for-reserve confirm-btn">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src ="reserve.js"></script>
+<!--<script id="navbar-script" src="../navBar/navbar.js" data-navbar-path="../navBar/navbar.html"></script>-->
+</body>
+</html>
